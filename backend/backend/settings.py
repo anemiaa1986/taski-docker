@@ -10,16 +10,15 @@ DEBUG = True
 ALLOWED_HOSTS = ['158.160.70.95', '127.0.0.1', 'localhost', 'anemiaa.ddns.net']
 
 INSTALLED_APPS = [
+    'api.apps.ApiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework.authtoken',
+    'corsheaders',
     'rest_framework',
-    'djoser',
-    'cats.apps.CatsConfig',
 ]
 
 MIDDLEWARE = [
@@ -32,7 +31,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'kittygram_backend.urls'
+ROOT_URLCONF = 'taski-docker_backend.urls'
 
 TEMPLATES = [
     {
@@ -50,7 +49,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'kittygram_backend.wsgi.application'
+WSGI_APPLICATION = 'taski-docker_backend.wsgi.application'
 
 
 DATABASES = {
